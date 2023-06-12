@@ -449,5 +449,62 @@ public class Main {
             }
             Arrays.stream(a).forEach(r -> System.out.println(Arrays.toString(r)));
         }
+
+        //task 15
+        {
+            System.out.println("Arrays of arrays task 15:");
+            int[][] m = {{1, 2, 3, 9, 5},
+                    {9, 2, 3, 4, 4},
+                    {3, 2, 3, 3, 3},
+                    {1, 2, 0, 4, 5},
+                    {10, 2, 3, 4, 4}};
+
+            int h = m.length;
+            int w = m[0].length;
+            int max = m[0][0];
+            for (int i = 0; i < h; i++) {
+                for (int j = 0; j < w; j++) {
+                    if (m[i][j] > max) {
+                        max = m[i][j];
+                    }
+                }
+            }
+            for (int i = 0; i < h; i++) {
+                for (int j = 0; j < w; j++) {
+                    if (m[i][j] % 2 == 1) {
+                        m[i][j] = max;
+                    }
+                }
+            }
+            Arrays.stream(m).forEach(r -> System.out.println(Arrays.toString(r)));
+        }
+
+        //task 16
+        {
+            System.out.println("Arrays of arrays task 16:");
+
+            int n = 4;
+            int[][] m = new int[n][n];
+
+            int num = 1;
+            int row = 0;
+            int col = n / 2;
+
+            while (num <= n * n) {
+                m[row][col] = num;
+                num++;
+
+                int newRow = (row - 1 + n) % n;
+                int newCol = (col + 1) % n;
+
+                if (m[newRow][newCol] != 0) {
+                    row = (row + 1) % n;
+                } else {
+                    row = newRow;
+                    col = newCol;
+                }
+            }
+            Arrays.stream(m).forEach(r -> System.out.println(Arrays.toString(r)));
+        }
     }
 }
