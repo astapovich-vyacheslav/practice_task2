@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef3bb929-0604-46a9-900f-e72901ef99f6" name="Changes" comment="tasks up to arrays of arrays 14">
+    <list default="true" id="ef3bb929-0604-46a9-900f-e72901ef99f6" name="Changes" comment="arrays of arrays done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -44,7 +44,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686346677652</updated>
-      <workItem from="1686346679324" duration="17071000" />
+      <workItem from="1686346679324" duration="23227000" />
     </task>
     <task id="LOCAL-00001" summary="tasks 1-5">
       <created>1686348409876</created>
@@ -60,7 +60,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686570049446</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="arrays of arrays done">
+      <created>1686584938809</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686584938809</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,6 +87,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="tasks 1-5" />
     <MESSAGE value="tasks up to arrays of arrays 14" />
-    <option name="LAST_COMMIT_MESSAGE" value="tasks up to arrays of arrays 14" />
+    <MESSAGE value="arrays of arrays done" />
+    <option name="LAST_COMMIT_MESSAGE" value="arrays of arrays done" />
   </component>
 </project>

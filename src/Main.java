@@ -506,5 +506,49 @@ public class Main {
             }
             Arrays.stream(m).forEach(r -> System.out.println(Arrays.toString(r)));
         }
+
+        //-------------------------One-dimensional arrays, sorts-------------------------
+
+        //task 1
+        {
+            ArrayList<Integer> a1 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6));
+            ArrayList<Integer> a2 = new ArrayList<>(Arrays.asList(111, 7, 8, 9, 10));
+            int a1Len = a1.size();
+            int a2Len = a2.size();
+            int k = 3;
+            for (int i = 0; i < a2Len; i++) {
+                a1.add(0);
+            }
+            for (int i = 1; i < a1Len - k; i++) {
+                a1.set(a1Len + a2Len - k + i, a1.get(k + i));
+            }
+            for (int i = 0; i < a2Len; i++) {
+                a1.set(k + i + 1, a2.get(i));
+            }
+
+            System.out.println("One-dimensional arrays, sorts task 1:\n" + Arrays.toString(a1.toArray()));
+        }
+
+        //task 2
+        {
+            ArrayList<Integer> a1 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 11));
+            ArrayList<Integer> a2 = new ArrayList<>(Arrays.asList(1, 3, 4, 4, 10, 12));
+            int a1Len = a1.size();
+            int a2Len = a2.size();
+            for (int i = 0; i < a2Len; i++) {
+                a1.add(0);
+            }
+            for (int i = 0, j = 0; i < a2Len + a1Len && j < a2Len; i++) {
+                if (a2.get(j) < a1.get(i) || (i == a1Len + j)) {
+                    for (int k = a1Len + j; k >= i; k--) {
+                        a1.set(k, a1.get(k - 1));
+                    }
+                    a1.set(i, a2.get(j));
+                    j++;
+                }
+            }
+
+            System.out.println("One-dimensional arrays, sorts task 2:\n" + Arrays.toString(a1.toArray()));
+        }
     }
 }
