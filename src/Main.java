@@ -1,3 +1,4 @@
+import utils.BinarySearch;
 import utils.Primes;
 
 import java.util.ArrayList;
@@ -549,6 +550,54 @@ public class Main {
             }
 
             System.out.println("One-dimensional arrays, sorts task 2:\n" + Arrays.toString(a1.toArray()));
+        }
+
+        //task 3
+        {
+            int[] a = {9, 3, 3, 1, 2, 5, 4, 10, 0};
+            for (int i = 0; i < a.length; i++) {
+                int max = a[i];
+                int maxInd = i;
+                for (int j = i + 1; j < a.length; j++) {
+                    if (a[j] > max) {
+                        max = a[j];
+                        maxInd = j;
+                    }
+                }
+                a[maxInd] = a[i];
+                a[i] = max;
+            }
+            System.out.println("One-dimensional arrays, sorts task 3:\n" + Arrays.toString(a));
+        }
+
+        //task 4
+        {
+            int[] a = {9, 3, 3, 1, 2, 5, 4, 10, 0};
+            int swaps = 0;
+            for (int i = 0; i < a.length; i++) {
+                for (int j = 1; j < a.length - i; j++) {
+                    if (a[j] < a[j - 1]) {
+                        swaps++;
+                        int temp = a[j];
+                        a[j] = a[j - 1];
+                        a[j - 1] = temp;
+                    }
+                }
+            }
+            System.out.println("One-dimensional arrays, sorts task 4:\n" + Arrays.toString(a) + " swaps: " + swaps);
+        }
+        //task 5
+        {
+            int[] a = {9, 3, 3, 1, 2, 5, 4, 10, 0};
+            for (int i = 1; i < a.length; i++) {
+                int ind = BinarySearch.search(Arrays.copyOfRange(a, 0, i), a[i]);
+                int temp = a[i];
+                for (int j = i; j > ind; j--) {
+                    a[j] = a[j - 1];
+                }
+                a[ind] = temp;
+            }
+            System.out.println("One-dimensional arrays, sorts task 5:\n" + Arrays.toString(a));
         }
     }
 }
