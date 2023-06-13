@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef3bb929-0604-46a9-900f-e72901ef99f6" name="Changes" comment="One-dimensional arrays task 2 done">
-      <change afterPath="$PROJECT_DIR$/src/utils/BinarySearch.java" afterDir="false" />
+    <list default="true" id="ef3bb929-0604-46a9-900f-e72901ef99f6" name="Changes" comment="One-dimensional arrays task 5 done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -45,7 +44,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686346677652</updated>
-      <workItem from="1686346679324" duration="26546000" />
+      <workItem from="1686346679324" duration="31370000" />
     </task>
     <task id="LOCAL-00001" summary="tasks 1-5">
       <created>1686348409876</created>
@@ -75,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686661403509</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="One-dimensional arrays task 5 done">
+      <created>1686670668490</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686670668490</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,6 +103,7 @@
     <MESSAGE value="tasks up to arrays of arrays 14" />
     <MESSAGE value="arrays of arrays done" />
     <MESSAGE value="One-dimensional arrays task 2 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="One-dimensional arrays task 2 done" />
+    <MESSAGE value="One-dimensional arrays task 5 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="One-dimensional arrays task 5 done" />
   </component>
 </project>

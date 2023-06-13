@@ -599,5 +599,69 @@ public class Main {
             }
             System.out.println("One-dimensional arrays, sorts task 5:\n" + Arrays.toString(a));
         }
+
+        //task 6
+        {
+            int[] a = {9, 3, 3, 1, 2, 5, 4, 10, 0};
+            for (int i = 1; i < a.length;) {
+                if (i == 0 || a[i - 1] <= a[i]) {
+                    i++;
+                } else {
+                    int t = a[i];
+                    a[i] = a[i - 1];
+                    a[i - 1] = t;
+                    i--;
+                }
+            }
+            System.out.println("One-dimensional arrays, sorts task 6:\n" + Arrays.toString(a));
+        }
+
+        //task 7
+        {
+            System.out.println("One-dimensional arrays, sorts task 7:");
+            int[] a = {1, 5, 10, 12, 13, 13, 15};
+            int[] b = {2, 2, 4, 6, 6, 10, 12, 14, 16};
+            for (int i = 0; i < b.length; i++) {
+                int ind = BinarySearch.search(a, b[i]);
+                System.out.print(ind + " ");
+            }
+            System.out.println();
+        }
+
+        //task 8
+        {
+            System.out.println("One-dimensional arrays, sorts task 8:");
+            int[][] m = {{1, 3}, {1, 2}, {3, 5}, {7, 9}, {1, 13}, {23, 26}};
+            int lcm = m[0][1];
+            for (int i = 1; i < m.length; i++) {
+                int currentDenominator = m[i][1];
+                int a = lcm;
+                int b = currentDenominator;
+                while (b != 0) {
+                    int temp = b;
+                    b = a % b;
+                    a = temp;
+                }
+                lcm = (lcm * currentDenominator) / a;
+            }
+            for (int[] fraction : m) {
+                int newNumerator = fraction[0] * (lcm / fraction[1]);
+                fraction[0] = newNumerator;
+                fraction[1] = lcm;
+            }
+
+            for (int i = 1; i < m.length;) {
+                if (i == 0 || m[i - 1][0] <= m[i][0]) {
+                    i++;
+                } else {
+                    int t = m[i][0];
+                    m[i][0] = m[i - 1][0];
+                    m[i - 1][0] = t;
+                    i--;
+                }
+            }
+
+            Arrays.stream(m).forEach(r -> System.out.println(r[0] + " / " + r[1] + " "));
+        }
     }
 }
