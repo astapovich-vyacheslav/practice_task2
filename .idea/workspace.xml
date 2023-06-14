@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef3bb929-0604-46a9-900f-e72901ef99f6" name="Changes" comment="One-dimensional arrays task 5 done">
+    <list default="true" id="ef3bb929-0604-46a9-900f-e72901ef99f6" name="Changes" comment="One-dimensional arrays and sorts done">
+      <change afterPath="$PROJECT_DIR$/src/utils/Procedures.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +44,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686346677652</updated>
-      <workItem from="1686346679324" duration="31370000" />
+      <workItem from="1686346679324" duration="37283000" />
     </task>
     <task id="LOCAL-00001" summary="tasks 1-5">
       <created>1686348409876</created>
@@ -81,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686670668490</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="One-dimensional arrays and sorts done">
+      <created>1686697957934</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686697957934</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +111,7 @@
     <MESSAGE value="arrays of arrays done" />
     <MESSAGE value="One-dimensional arrays task 2 done" />
     <MESSAGE value="One-dimensional arrays task 5 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="One-dimensional arrays task 5 done" />
+    <MESSAGE value="One-dimensional arrays and sorts done" />
+    <option name="LAST_COMMIT_MESSAGE" value="One-dimensional arrays and sorts done" />
   </component>
 </project>
