@@ -136,5 +136,176 @@ public class Procedures {
     }
 
     //task 12
+    public static ArrayList<Integer> generateArray(int K, int N) {
+        ArrayList<Integer> A = new ArrayList<>();
+        for (int i = 1; i <= N; i++) {
+            if (sumOfDigits(i) == K) {
+                A.add(i);
+            }
+        }
+        return A;
+    }
+
+    public static int sumOfDigits(int number) {
+        int sum = 0;
+        while (number > 0) {
+            sum += number % 10;
+            number /= 10;
+        }
+        return sum;
+    }
+
+    //task 13
+    public static void printTwinPrimes(int n) {
+        int start = n;
+        int end = 2 * n;
+
+        ArrayList<Integer> twinPrimes = findTwinPrimes(start, end);
+
+        if (twinPrimes.isEmpty()) {
+            System.out.println("No twin primes found in the range [" + start + ", " + end + "]");
+        } else {
+            System.out.println("Twin primes in the range [" + start + ", " + end + "]:");
+            for (int i = 0; i < twinPrimes.size(); i += 2) {
+                System.out.println(twinPrimes.get(i) + " and " + twinPrimes.get(i + 1));
+            }
+        }
+    }
+
+    public static ArrayList<Integer> findTwinPrimes(int start, int end) {
+        ArrayList<Integer> twinPrimes = new ArrayList<>();
+
+        for (int i = start; i <= end - 2; i++) {
+            if (isPrime(i) && isPrime(i + 2)) {
+                twinPrimes.add(i);
+                twinPrimes.add(i + 2);
+            }
+        }
+
+        return twinPrimes;
+    }
+
+    public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    //task 14
+    public static ArrayList<Integer> findArmstrongNumbers(int k) {
+        ArrayList<Integer> armstrongNumbers = new ArrayList<>();
+
+        for (int number = 1; number <= k; number++) {
+            if (isArmstrongNumber(number)) {
+                armstrongNumbers.add(number);
+            }
+        }
+
+        return armstrongNumbers;
+    }
+
+    public static boolean isArmstrongNumber(int number) {
+        int sum = 0;
+        int originalNumber = number;
+        int digits = countDigits(number);
+
+        while (number > 0) {
+            int digit = number % 10;
+            sum += Math.pow(digit, digits);
+            number /= 10;
+        }
+
+        return sum == originalNumber;
+    }
+
+    public static int countDigits(int number) {
+        int count = 0;
+        while (number != 0) {
+            number /= 10;
+            count++;
+        }
+        return count;
+    }
+
+    //task 15
+    public static ArrayList<Integer> findIncreasingNumbers(int n) {
+        ArrayList<Integer> increasingNumbers = new ArrayList<>();
+
+        int minNumber = (int) Math.pow(10, n - 1);
+        int maxNumber = (int) Math.pow(10, n) - 1;
+
+        for (int number = minNumber; number <= maxNumber; number++) {
+            if (isIncreasing(number)) {
+                increasingNumbers.add(number);
+            }
+        }
+
+        return increasingNumbers;
+    }
+
+    public static boolean isIncreasing(int number) {
+        int previousDigit = number % 10;
+        number /= 10;
+
+        while (number > 0) {
+            int currentDigit = number % 10;
+            if (currentDigit >= previousDigit) {
+                return false;
+            }
+            previousDigit = currentDigit;
+            number /= 10;
+        }
+
+        return true;
+    }
+
+    //task 16
+    public static int findOddDigitSum(int n) {
+        int minNumber = (int) Math.pow(10, n - 1);
+        int maxNumber = (int) Math.pow(10, n) - 1;
+        int sum = 0;
+
+        for (int number = minNumber; number <= maxNumber; number++) {
+            if (hasOnlyOddDigits(number)) {
+                sum += number;
+            }
+        }
+
+        return sum;
+    }
+
+    public static boolean hasOnlyOddDigits(int number) {
+        while (number > 0) {
+            int digit = number % 10;
+            if (digit % 2 == 0) {
+                return false;
+            }
+            number /= 10;
+        }
+
+        return true;
+    }
+
+    public static int countEvenDigits(int number) {
+        int count = 0;
+
+        while (number > 0) {
+            int digit = number % 10;
+            if (digit % 2 == 0) {
+                count++;
+            }
+            number /= 10;
+        }
+
+        return count;
+    }
 
 }

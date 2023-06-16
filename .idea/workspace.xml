@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef3bb929-0604-46a9-900f-e72901ef99f6" name="Changes" comment="One-dimensional arrays and sorts done">
-      <change afterPath="$PROJECT_DIR$/src/utils/Procedures.java" afterDir="false" />
+    <list default="true" id="ef3bb929-0604-46a9-900f-e72901ef99f6" name="Changes" comment="Methods task 11 done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Procedures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Procedures.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,13 +29,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -44,7 +44,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686346677652</updated>
-      <workItem from="1686346679324" duration="37283000" />
+      <workItem from="1686346679324" duration="37779000" />
+      <workItem from="1686908962813" duration="1378000" />
     </task>
     <task id="LOCAL-00001" summary="tasks 1-5">
       <created>1686348409876</created>
@@ -88,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686697957934</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Methods task 11 done">
+      <created>1686774790712</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686774790712</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,6 +120,7 @@
     <MESSAGE value="One-dimensional arrays task 2 done" />
     <MESSAGE value="One-dimensional arrays task 5 done" />
     <MESSAGE value="One-dimensional arrays and sorts done" />
-    <option name="LAST_COMMIT_MESSAGE" value="One-dimensional arrays and sorts done" />
+    <MESSAGE value="Methods task 11 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Methods task 11 done" />
   </component>
 </project>
