@@ -663,5 +663,242 @@ public class Main {
 
             Arrays.stream(m).forEach(r -> System.out.println(r[0] + " / " + r[1] + " "));
         }
+
+        //---------------------------Strings---------------------------------
+
+        //task 1
+        {
+            String[] camelCase = {"myVariable", "someValue", "anotherExample"};
+            String[] snakeCase = new String[camelCase.length];
+
+            for (int i = 0; i < camelCase.length; i++) {
+                StringBuilder snakeCaseBuilder = new StringBuilder();
+
+                for (char c : camelCase[i].toCharArray()) {
+                    if (Character.isUpperCase(c)) {
+                        snakeCaseBuilder.append("_");
+                        snakeCaseBuilder.append(Character.toLowerCase(c));
+                    } else {
+                        snakeCaseBuilder.append(c);
+                    }
+                }
+
+                snakeCase[i] = snakeCaseBuilder.toString();
+            }
+
+            System.out.println("String as character array - Task 1:");
+            System.out.println("CamelCase: " + Arrays.toString(camelCase));
+            System.out.println("SnakeCase: " + Arrays.toString(snakeCase));
+        }
+
+        //task 2
+        {
+            String text = "This is a word and another word";
+            String replacedText = text.replaceAll("word", "letter");
+
+            System.out.println("\nString as character array - Task 2:");
+            System.out.println("Original text: " + text);
+            System.out.println("Replaced text: " + replacedText);
+        }
+
+        //task 3
+        {
+            String text = "Hello123World456";
+            int digitCount = 0;
+
+            for (char c : text.toCharArray()) {
+                if (Character.isDigit(c)) {
+                    digitCount++;
+                }
+            }
+
+            System.out.println("\nString as character array - Task 3:");
+            System.out.println("Text: " + text);
+            System.out.println("Digit count: " + digitCount);
+        }
+
+        //task 4
+        {
+            String text = "There are 3 numbers in this sentence: 123, 45, and 6789";
+            String[] numbers = text.split("\\D+");
+
+            System.out.println("\nString as character array - Task 4:");
+            System.out.println("Text: " + text);
+            System.out.println("Number count: " + (numbers.length - 1));
+        }
+
+        //task 5
+        {
+            String text = "   Remove   extra   spaces    from   this   string.   ";
+            String trimmedText = text.trim().replaceAll("\\s+", " ");
+
+            System.out.println("\nString as character array - Task 5:");
+            System.out.println("Original text: \"" + text + "\"");
+            System.out.println("Trimmed text: \"" + trimmedText + "\"");
+        }
+
+        //String and StringBuilder
+
+        //task 1
+        {
+            String text = "This   text    has   multiple    spaces.";
+            int maxConsecutiveSpaces = 0;
+            int currentConsecutiveSpaces = 0;
+
+            for (int i = 0; i < text.length(); i++) {
+                if (text.charAt(i) == ' ') {
+                    currentConsecutiveSpaces++;
+                    if (currentConsecutiveSpaces > maxConsecutiveSpaces) {
+                        maxConsecutiveSpaces = currentConsecutiveSpaces;
+                    }
+                } else {
+                    currentConsecutiveSpaces = 0;
+                }
+            }
+
+            System.out.println("\nString as String or StringBuilder - Task 1:");
+            System.out.println("Text: " + text);
+            System.out.println("Max consecutive spaces: " + maxConsecutiveSpaces);
+        }
+
+        //task 2
+        {
+            String text = "abcde";
+            StringBuilder modifiedText = new StringBuilder();
+
+            for (int i = 0; i < text.length(); i++) {
+                modifiedText.append(text.charAt(i));
+                if (text.charAt(i) == 'a') {
+                    modifiedText.append('b');
+                }
+            }
+
+            System.out.println("\nString as String or StringBuilder - Task 2:");
+            System.out.println("Original text: " + text);
+            System.out.println("Modified text: " + modifiedText);
+        }
+
+        //task 3
+        {
+            String word = "level";
+            boolean isPalindrome = true;
+
+            for (int i = 0; i < word.length() / 2; i++) {
+                if (word.charAt(i) != word.charAt(word.length() - 1 - i)) {
+                    isPalindrome = false;
+                    break;
+                }
+            }
+
+            System.out.println("\nString as String or StringBuilder - Task 3:");
+            System.out.println("Word: " + word);
+            System.out.println("Is palindrome: " + isPalindrome);
+        }
+
+        //task 4
+        {
+            String originalWord = "информатика";
+            String newWord = originalWord.substring(7, 8) + originalWord.substring(3, 5)
+                    + originalWord.substring(7, 8);
+
+            System.out.println("\nString as String or StringBuilder - Task 4:");
+            System.out.println("Original word: " + originalWord);
+            System.out.println("New word: " + newWord);
+        }
+
+        //task 5
+        {
+            String text = "There are several 'a' characters in this sentence.";
+            int count = 0;
+
+            for (char c : text.toCharArray()) {
+                if (c == 'a') {
+                    count++;
+                }
+            }
+
+            System.out.println("\nString as String or StringBuilder - Task 5:");
+            System.out.println("Text: " + text);
+            System.out.println("Count of 'a': " + count);
+        }
+
+        //task 6
+        {
+            String text = "Hello";
+            StringBuilder doubledText = new StringBuilder();
+
+            for (int i = 0; i < text.length(); i++) {
+                doubledText.append(text.charAt(i));
+                doubledText.append(text.charAt(i));
+            }
+
+            System.out.println("\nString as String or StringBuilder - Task 6:");
+            System.out.println("Original text: " + text);
+            System.out.println("Doubled text: " + doubledText);
+        }
+
+        //task 7
+        {
+            String text = "abc cde def";
+            StringBuilder uniqueChars = new StringBuilder();
+
+            for (char c : text.toCharArray()) {
+                if (c != ' ' && uniqueChars.indexOf(Character.toString(c)) == -1) {
+                    uniqueChars.append(c);
+                }
+            }
+
+            System.out.println("\nString as String or StringBuilder - Task 7:");
+            System.out.println("Original text: " + text);
+            System.out.println("Modified text: " + uniqueChars);
+        }
+
+        //task 8
+        {
+            String text = "This is a sample sentence with multiple words";
+            String[] words = text.split(" ");
+            String longestWord = "";
+
+            for (String word : words) {
+                if (word.length() > longestWord.length()) {
+                    longestWord = word;
+                }
+            }
+
+            System.out.println("\nString as String or StringBuilder - Task 8:");
+            System.out.println("Original text: " + text);
+            System.out.println("Longest word: " + longestWord);
+        }
+
+        //task 9
+        {
+            String text = "This is a Sample Text with UPPERCASE and lowercase letters.";
+            int lowercaseCount = 0;
+            int uppercaseCount = 0;
+
+            for (char c : text.toCharArray()) {
+                if (c >= 'a' && c <= 'z') {
+                    lowercaseCount++;
+                } else if (c >= 'A' && c <= 'Z') {
+                    uppercaseCount++;
+                }
+            }
+
+            System.out.println("\nString as String or StringBuilder - Task 9:");
+            System.out.println("Text: " + text);
+            System.out.println("Lowercase count: " + lowercaseCount);
+            System.out.println("Uppercase count: " + uppercaseCount);
+        }
+
+        //task 10
+        {
+            String text = "This is the first sentence. And here is the second one! What about a third?";
+            String[] sentences = text.split("[.!?]+");
+            int sentenceCount = sentences.length;
+
+            System.out.println("\nString as String or StringBuilder - Task 10:");
+            System.out.println("Text: " + text);
+            System.out.println("Sentence count: " + sentenceCount);
+        }
     }
 }
